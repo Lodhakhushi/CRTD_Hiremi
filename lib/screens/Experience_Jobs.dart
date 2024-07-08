@@ -35,9 +35,8 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
       ),
     ),
     Applies()
-    // Add more screens as needed
-  ];
 
+  ];
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -162,7 +161,7 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
       ),
       floatingActionButton: SizedBox(
         width: 100,
-        height: 200,
+        height: 70,
         child: Stack(
           alignment: Alignment.center,
           children: [
