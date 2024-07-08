@@ -1,47 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:hiremi/screens/About_us.dart';
-import 'package:hiremi/screens/Applies_New.dart';
+import 'package:hiremi/screens/Experience_Jobs.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-
-class ExperienceJobs extends StatefulWidget {
-  const ExperienceJobs({Key? key}) : super(key: key);
+class About_Us extends StatefulWidget {
+  const About_Us({super.key});
 
   @override
-  State<ExperienceJobs> createState() => _ExperienceJobsState();
+  State<About_Us> createState() => _About_UsState();
 }
 
-class _ExperienceJobsState extends State<ExperienceJobs> {
+class _About_UsState extends State<About_Us> {
   int _selectedIndex = 0;
-  static List<Widget> _widgetOptions = <Widget>[
-    SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Image(image: AssetImage('assets/images/Frame 110.png')),
-          ),
-          Image(image: AssetImage('assets/images/Team work-bro.png')),
-          SizedBox(height: 10),
-          Text(
-            'Hiremi’s Recruiters are planning for new jobs',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-            textAlign: TextAlign.center,
-          ),
-          Text(
-            'please wait for few days',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    ),
-    Applies()
 
-  ];
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  Future<void> _launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -55,7 +36,7 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
           ),
         ),
         title: Text(
-          _selectedIndex==1? 'Applies' : 'Experienced Jobs',
+          'About Us',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
         ),
         centerTitle: true,
@@ -68,7 +49,98 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
           ),
         ],
       ),
-      body: _widgetOptions.elementAt(_selectedIndex),
+      body: Column(
+        children: [
+          Center(
+            child: Image(
+              image: AssetImage('assets/images/Subscriber-bro.png'),
+              height: 280.0,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Image(image: AssetImage('assets/images/main (1).png')),
+          SizedBox(
+            height: 12,
+          ),
+          Text(
+            'Elevate Your Career, Empower',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0,color: Colors.grey.shade700),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            'Your Business',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0,color: Colors.grey.shade700),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'Hiremi is a platform for career and business growth, offering',
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.5,
+                color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            'efficient recruitment solutions and development resources for ',
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.0,
+                color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            'job seekers and recent graduates.',
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.0,
+                color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'With services in project management, recruitment outsourcing',
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.0,
+                color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            'payroll, mentorship, and corporate training.',
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.0,
+                color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            onTap: () {
+              _launchURL('http://www.hiremi.in/About%20Us%20page/about.html');
+            },
+            child: Text(
+              'Learn more',
+              style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 15.0,
+                  color: Colors.blue,
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.blue,
+                  decorationThickness: 2.0),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ClipPath(
@@ -91,6 +163,11 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
                   child: IconButton(
                     onPressed: () {
                       _onItemTapped(0);
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return ExperienceJobs();
+                        },
+                      ));
                     },
                     icon: ImageIcon(
                       AssetImage('assets/icons/nav_icons/Group 142.png'),
@@ -166,16 +243,19 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset('assets/images/Group 138.png',),
+            Image.asset(
+              'assets/images/Group 138.png',
+            ),
             Material(
               color: Colors.transparent,
               child: ClipOval(
                 child: InkWell(
                   onTap: () {
-
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return About_Us();
-                    },));
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return About_Us();
+                      },
+                    ));
                   },
                   child: Image.asset(
                     'assets/images/Group 141.png',
@@ -189,8 +269,6 @@ class _ExperienceJobsState extends State<ExperienceJobs> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
     );
   }
 }
-
