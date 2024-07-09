@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hiremi/screens/Applies.dart';
+import 'package:hiremi/screens/Experienced_Jobs.dart';
 
 
 
@@ -22,8 +23,8 @@ class _NewNavbarState extends State<NewNavbar> {
   void initState() {
     super.initState();
     _pages = [
-      // HomeScreen(isVerified: widget.isV),
-       // const Applies(),
+       //Experienced_Jobs(),
+        //Applies(),
       // const QueriesScreen(),
       // const ProfileScreen(),
     ];

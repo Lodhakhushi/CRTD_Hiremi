@@ -34,7 +34,7 @@ class _Experienced_JobsState extends State<Experienced_Jobs> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(screenHeight*0.02),
             child: Image.asset('assets/images/Frame 110.png'),
           ),
           Image.asset('assets/images/Team work-bro.png'),
