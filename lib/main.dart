@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hiremi/screens/About_us.dart';
+import 'package:hiremi/screens/Applies.dart';
 
 
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:About_Us()
+      home:Applies()
     );
   }
 }

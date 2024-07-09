@@ -32,7 +32,7 @@ class _AppliesState extends State<Applies> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: const EdgeInsets.all(3.0),
+            padding:  EdgeInsets.all(screenHeight*0.02),
             child: Image(
               image: AssetImage('assets/images/Empty-bro.png'),
             ),
