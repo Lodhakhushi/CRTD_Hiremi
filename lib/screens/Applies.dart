@@ -16,7 +16,7 @@ class _AppliesState extends State<Applies> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Hiremi's Home",
+          "Applies",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),

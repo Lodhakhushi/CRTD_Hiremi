@@ -19,7 +19,7 @@ class _Experienced_JobsState extends State<Experienced_Jobs> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Hiremi's Home",
+          "Experienced Jobs",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
