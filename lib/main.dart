@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hiremi/screens/About_us.dart';
-import 'package:hiremi/screens/Applies.dart';
-import 'package:hiremi/screens/Experienced_Jobs.dart';
 
 
 
