@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hiremi/screens/About_us.dart';
 import 'package:hiremi/screens/Applies.dart';
+import 'package:hiremi/screens/Experienced_Jobs.dart';
+import 'package:hiremi/screens/Help_Support.dart';
+import 'package:hiremi/screens/Queries.dart';
 
 
 
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Applies()
+      home:Queries()
     );
   }
 }
