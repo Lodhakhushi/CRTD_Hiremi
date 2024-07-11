@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hiremi/screens/Queries.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -97,26 +98,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10.0)),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.person_outline,
-                          color: Colors.red, size: 20.0),
-                    ),
-                    SizedBox(width: screenWidth * 0.01),
-                    Expanded(
-                      child: Text(
-                        'Personal Info',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black,
+                child: TextButton(
+                  onPressed: () {
+
+                  },
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.person_outline,
+                            color: Colors.red, size: 20.0),
+                      ),
+                      SizedBox(width: screenWidth * 0.01),
+                      Expanded(
+                        child: Text(
+                          'Personal Info',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
-                    ),
-                    Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 25),
-                    SizedBox(height: screenHeight * 0.02),
-                  ],
+                      Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 25),
+                      SizedBox(height: screenHeight * 0.02),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -141,102 +147,123 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     borderRadius: BorderRadius.circular(10.0)),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.folder_shared,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'Manage Permission',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
+                    TextButton(
+                      onPressed: () {
+
+                      },
+
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.folder_shared,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'Manage Permission',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            color: Colors.grey, size: 25),
-                        SizedBox(height: 20),
-                      ],
+                          Icon(Icons.arrow_forward_ios,
+                              color: Colors.grey, size: 25),
+                          SizedBox(height: 20),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.lock_outline,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'Change password',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
+                    TextButton(
+                      onPressed: () {
+
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.lock_outline,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'Change password',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            color: Colors.grey, size: 25),
-                        SizedBox(
-                          height: screenHeight * 0.02,
-                        ),
-                      ],
+                          Icon(Icons.arrow_forward_ios,
+                              color: Colors.grey, size: 25),
+                          SizedBox(
+                            height: screenHeight * 0.02,
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.notifications_active_outlined,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'Notifications',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
+                    TextButton(
+                      onPressed: () {
+
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.notifications_active_outlined,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'Notifications',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                        Switch(
-                            value: false,
+                          Switch(
+                              value: false,
+                              onChanged: (value) {},
+                              activeColor: Colors.white,
+                              inactiveThumbColor: Colors.red),
+                          SizedBox(height: screenHeight * 0.02),
+                        ],
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.location_on_outlined,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'Location',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Switch(
+                            value: true,
                             onChanged: (value) {},
                             activeColor: Colors.white,
-                            inactiveThumbColor: Colors.red),
-                        SizedBox(height: screenHeight * 0.02),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.location_on_outlined,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'Location',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
-                            ),
+                            activeTrackColor: Colors.red,
                           ),
-                        ),
-                        Switch(
-                          value: true,
-                          onChanged: (value) {},
-                          activeColor: Colors.white,
-                          activeTrackColor: Colors.red,
-                        ),
-                        SizedBox(height: screenHeight * 0.01),
-                      ],
+                          SizedBox(height: screenHeight * 0.01),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -263,51 +290,63 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     borderRadius: BorderRadius.circular(10.0)),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.menu_book,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'About Us',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
+                    TextButton(
+                      onPressed: () {
+
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.menu_book,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'About Us',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            color: Colors.grey, size: 25),
-                        SizedBox(
-                          height: screenHeight * 0.02,
-                        ),
-                      ],
+                          Switch(
+                            value: true,
+                            onChanged: (value) {},
+                            activeColor: Colors.white,
+                            activeTrackColor: Colors.red,
+                          ),
+                          SizedBox(height: screenHeight * 0.01),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Icon(Icons.phone_forwarded_rounded,
-                              color: Colors.red, size: 20.0),
-                        ),
-                        SizedBox(width: screenWidth * 0.01),
-                        Expanded(
-                          child: Text(
-                            'Help & Support',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
+                    TextButton(
+                      onPressed: () {
+
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Icon(Icons.phone_forwarded_rounded,
+                                color: Colors.red, size: 20.0),
+                          ),
+                          SizedBox(width: screenWidth * 0.01),
+                          Expanded(
+                            child: Text(
+                              'Help & Support',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                              ),
                             ),
                           ),
-                        ),
-                        Icon(Icons.arrow_forward_ios,
-                            color: Colors.grey, size: 25),
-                        SizedBox(height: screenHeight * 0.02),
-                      ],
+                          Icon(Icons.arrow_forward_ios,
+                              color: Colors.grey, size: 25),
+                          SizedBox(height: screenHeight * 0.02),
+                        ],
+                      ),
                     ),
                   ],
                 ),
