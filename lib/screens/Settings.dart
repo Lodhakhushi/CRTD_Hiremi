@@ -24,7 +24,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(screenWidth * 0.04),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,10 +37,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Icon(
                       Icons.person,
                       color: Colors.red,
-                      size: 40,
+                      size: screenHeight*0.06,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: screenWidth*0.01),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -105,7 +105,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   child: Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(screenWidth * 0.02),
                         child: Icon(Icons.person_outline,
                             color: Colors.red, size: 20.0),
                       ),
@@ -155,7 +155,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.folder_shared,
                                 color: Colors.red, size: 20.0),
                           ),
@@ -182,7 +182,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.lock_outline,
                                 color: Colors.red, size: 20.0),
                           ),
@@ -211,7 +211,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.notifications_active_outlined,
                                 color: Colors.red, size: 20.0),
                           ),
@@ -241,7 +241,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.location_on_outlined,
                                 color: Colors.red, size: 20.0),
                           ),
@@ -297,7 +297,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.menu_book,
                                 color: Colors.red, size: 20.0),
                           ),
@@ -328,7 +328,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: EdgeInsets.all(screenWidth * 0.03),
                             child: Icon(Icons.phone_forwarded_rounded,
                                 color: Colors.red, size: 20.0),
                           ),
