@@ -88,7 +88,7 @@ class _HelpSupportState extends State<HelpSupport> {
                             builder: (BuildContext context) {
                               return //CustomAlertBox();
 
-                              CustomAlert2();
+                              CustomAlertBox();
                             },
                           );
                         },

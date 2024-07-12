@@ -37,10 +37,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Icon(
                       Icons.person,
                       color: Colors.red,
-                      size: screenHeight*0.06,
+                      size: screenHeight * 0.05,
                     ),
                   ),
-                  SizedBox(width: screenWidth*0.01),
+                  SizedBox(width: screenWidth * 0.01),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -93,15 +93,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 height: screenHeight * 0.01,
               ),
               Container(
-                height: 70,
-                width: 520,
+                height: 60,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10.0)),
                 child: TextButton(
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                   child: Row(
                     children: [
                       Padding(
@@ -120,7 +118,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                       ),
                       Icon(Icons.arrow_forward_ios, color: Colors.grey, size: 25),
-                      SizedBox(height: screenHeight * 0.02),
                     ],
                   ),
                 ),
@@ -128,7 +125,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               SizedBox(
                 height: screenHeight * 0.01,
               ),
-
               Text(
                 'Privacy & Security',
                 style: TextStyle(
@@ -137,21 +133,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ),
               SizedBox(
-                height: screenHeight * 0.02,
+                height: screenHeight * 0.01,
               ),
               Container(
-                height: 220,
-                width: 520,
+                height: 210,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10.0)),
                 child: Column(
                   children: [
                     TextButton(
-                      onPressed: () {
-
-                      },
-
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -171,14 +164,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                           Icon(Icons.arrow_forward_ios,
                               color: Colors.grey, size: 25),
-                          SizedBox(height: 20),
                         ],
                       ),
                     ),
                     TextButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -198,16 +188,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                           Icon(Icons.arrow_forward_ios,
                               color: Colors.grey, size: 25),
-                          SizedBox(
-                            height: screenHeight * 0.02,
-                          ),
                         ],
                       ),
                     ),
                     TextButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -230,14 +215,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               onChanged: (value) {},
                               activeColor: Colors.white,
                               inactiveThumbColor: Colors.red),
-                          SizedBox(height: screenHeight * 0.02),
                         ],
                       ),
                     ),
                     TextButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -261,7 +243,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             activeColor: Colors.white,
                             activeTrackColor: Colors.red,
                           ),
-                          SizedBox(height: screenHeight * 0.01),
                         ],
                       ),
                     ),
@@ -271,7 +252,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               SizedBox(
                 height: screenHeight * 0.02,
               ),
-
               Text(
                 'About & More',
                 style: TextStyle(
@@ -283,17 +263,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 height: screenHeight * 0.01,
               ),
               Container(
-                height: 120,
-                width: 520,
+                height: 110,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10.0)),
                 child: Column(
                   children: [
                     TextButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -311,20 +289,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ),
                             ),
                           ),
-                          Switch(
-                            value: true,
-                            onChanged: (value) {},
-                            activeColor: Colors.white,
-                            activeTrackColor: Colors.red,
-                          ),
-                          SizedBox(height: screenHeight * 0.01),
+                          Icon(Icons.arrow_forward_ios,
+                              color: Colors.grey, size: 25),
                         ],
                       ),
                     ),
                     TextButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       child: Row(
                         children: [
                           Padding(
@@ -344,12 +315,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                           Icon(Icons.arrow_forward_ios,
                               color: Colors.grey, size: 25),
-                          SizedBox(height: screenHeight * 0.02),
                         ],
                       ),
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: screenHeight * 0.05, // Extra space at the bottom
               ),
             ],
           ),
